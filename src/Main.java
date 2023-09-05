@@ -1,17 +1,52 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        //---------------------------------Задание 3---------------------------------------
+        int[] arr1 = {1,3,5,7,9};
+        int sum1 = 0;
+        for (int i = 0; i < arr1.length; i++) {
+            sum1 += arr1[i];
         }
+        float mean = (float)sum1/arr1.length;
+        System.out.println("Mean = " + mean + " Sum = " + sum1);
+        //---------------------------------Задание 4---------------------------------------
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите размер массива: ");
+        int arr2length = 0;
+        if(sc.hasNextInt()) {
+            arr2length = sc.nextInt();
+        }
+        int[] arr2 = new int[arr2length];
+        for(int i = 0; i < arr2.length; i++){
+            System.out.println("Введите число: ");
+            arr2[i] = sc.nextInt();
+        }
+        int sum2 = 0;
+        int i = 0;
+        int maxnum = Integer.MIN_VALUE;
+        int minnum = Integer.MAX_VALUE;
+        while(i < arr2.length) {
+            sum2 += arr2[i];
+            if (arr2[i] > maxnum){
+                maxnum = arr2[i];
+            }
+            if(arr2[i] < minnum){
+                minnum = arr2[i];
+            }
+            i++;
+        }
+        System.out.println("Sum = " + sum2 + " Max = " + maxnum + " Min = " + minnum);
+        //---------------------------------Задание 5---------------------------------------
+        for (int k = 0; k < args.length; k++) {
+            System.out.println("Аргумент " + k + ": " + args[k]); //Аргументов нет, ничего не выведется
+        }
+        //---------------------------------Задание 6---------------------------------------
+        for (i = 1; i <= 10; i++) {
+            System.out.printf("1/" + i + " = " + (float) 1/i + "\n");
+        }
+        //---------------------------------Задание 7---------------------------------------
+        System.out.printf("Factorial of 4 equals: " + factroialCounter.countFactorial(4));
+
     }
 }
