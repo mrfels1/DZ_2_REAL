@@ -46,7 +46,6 @@ public class Main {
             System.out.printf("1/" + i + " = " + (float) 1/i + "\n");
         }
         //---------------------------------Задание 7---------------------------------------
-        System.out.printf("Factorial of 4 equals: " + factroialCounter.countFactorial(4));
-
+        System.out.printf("Factorial of 50 equals: " + factroialCounter.countFactorial(50));
     }
 }
